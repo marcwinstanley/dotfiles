@@ -79,6 +79,9 @@ if executable('ag')
   endif
 endif
 
+" bind K to grep word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
 " Make it obvious where 80 characters is
 set textwidth=80
 set colorcolumn=+1
@@ -154,3 +157,8 @@ set diffopt+=vertical
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
+
+" Colorschemes"
+syntax enable
+set background=dark
+colorscheme solarized
