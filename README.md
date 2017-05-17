@@ -1,7 +1,5 @@
-thoughtbot dotfiles
+marcwinstanley dotfiles
 ===================
-
-![prompt](http://images.thoughtbot.com/thoughtbot-dotfiles-prompt.png)
 
 Requirements
 ------------
@@ -13,9 +11,9 @@ Set zsh as your login shell:
 Install
 -------
 
-Clone onto your laptop:
+Clone onto your machine:
 
-    git clone git://github.com/thoughtbot/dotfiles.git ~/dotfiles
+    git clone git://github.com/marcwinstanley/dotfiles.git ~/dotfiles
 
 (Or, [fork and keep your fork
 updated](http://robots.thoughtbot.com/keeping-a-github-fork-updated)).
@@ -220,17 +218,8 @@ redistributed under the terms specified in the [`LICENSE`] file.
 
 [`LICENSE`]: /LICENSE
 
-About thoughtbot
+About 
 ----------------
 
-![thoughtbot](https://thoughtbot.com/logo.png)
-
-dotfiles is maintained and funded by thoughtbot, inc.
-The names and logos for thoughtbot are trademarks of thoughtbot, inc.
-
-We love open source software!
-See [our other projects][community].
-We are [available for hire][hire].
-
-[community]: https://thoughtbot.com/community?utm_source=github
-[hire]: https://thoughtbot.com/hire-us?utm_source=github
+These dotfiles are a work in progress and are based on the dotfiles provided by
+[thoughtbot](http://thoughtbot.com).
