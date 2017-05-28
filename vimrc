@@ -161,4 +161,7 @@ endif
 " Colorschemes"
 syntax enable
 set background=dark
-colorscheme solarized
+if (has("termguicolors"))
+  set termguicolors
+endif
+colorscheme spacemacs-theme
