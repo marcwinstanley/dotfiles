@@ -51,7 +51,7 @@ any new files in the repository.
 Make your own customizations
 ----------------------------
 
-Put your customizations in dotfiles appended with `.local`:
+Put your customizations in ~/dotfiles-local appended with `.local`:
 
 * `~/.aliases.local`
 * `~/.git_template.local/*`
@@ -101,6 +101,12 @@ Your `~/.vimrc.bundles.local` might look like this:
 
     Plug 'Lokaltog/vim-powerline'
     Plug 'stephenmckinney/vim-solarized-powerline'
+    
+If you create a new `.local` file run rcup:
+
+    rcup
+    
+This should establish the symlinks to use the new `.local` file.
 
 zsh Configurations
 ------------------
