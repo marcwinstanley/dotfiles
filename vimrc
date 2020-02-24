@@ -83,8 +83,8 @@ endif
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " Make it obvious where 80 characters is
-set textwidth=80
-set colorcolumn=+1
+" set textwidth=80
+set colorcolumn=81
 
 " Numbers
 set number
@@ -157,11 +157,3 @@ set diffopt+=vertical
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
-
-" Colorschemes"
-syntax enable
-set background=dark
-if (has("termguicolors"))
-  set termguicolors
-endif
-colorscheme spacemacs-theme
