@@ -67,6 +67,12 @@ if executable('ag')
   " Use Ag over Grep
   set grepprg=ag\ --nogroup\ --nocolor
   nnoremap \ :Ag<CR>
+  command! -bang -nargs=* Ag
+    \ call fzf#vim#ag(
+    \   <q-args>,
+    \   {'options': '--delimiter : --nth 4..'},
+    \   <bang>0
+    \ )
 endif
 
 " bind K to grep word under cursor
