@@ -66,17 +66,7 @@ set nojoinspaces
 if executable('ag')
   " Use Ag over Grep
   set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-
-  if !exists(":Ag")
-    command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-    nnoremap \ :Ag<SPACE>
-  endif
+  nnoremap \ :Ag<CR>
 endif
 
 " bind K to grep word under cursor
@@ -137,12 +127,6 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-" configure syntastic syntax checking to check on open as well as save
-let g:syntastic_check_on_open=1
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
-let g:syntastic_eruby_ruby_quiet_messages =
-    \ {"regex": "possibly useless use of a variable in void context"}
-
 " Set spellfile to location that is guaranteed to exist, can be symlinked to
 " Dropbox or kept in Git and managed outside of thoughtbot/dotfiles using rcm.
 set spellfile=$HOME/.vim-spell-en.utf-8.add
@@ -152,6 +136,18 @@ set complete+=kspell
 
 " Always use vertical diffs
 set diffopt+=vertical
+
+"display list of buffers"
+:nnoremap <Leader>b :buffers<CR>:buffer<Space>
+
+"fix syntax highlighting"
+:noremap <Leader>e :syntax sync fromstart<CR>
+
+"allow es6 files to be treated as javascript
+au BufNewFile,BufRead *.es6 set filetype=javascript
+
+"Map FZF to ctrl-p"
+nnoremap <C-p> :FZF<CR>
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
