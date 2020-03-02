@@ -15,9 +15,6 @@ Clone onto your machine:
 
     git clone git://github.com/marcwinstanley/dotfiles.git ~/dotfiles
 
-(Or, [fork and keep your fork
-updated](http://robots.thoughtbot.com/keeping-a-github-fork-updated)).
-
 Install [rcm](https://github.com/thoughtbot/rcm):
 
     brew tap thoughtbot/formulae
@@ -51,14 +48,11 @@ any new files in the repository.
 Make your own customizations
 ----------------------------
 
-Put your customizations in ~/dotfiles-local appended with `.local`:
+Put your customizations in dotfiles, or dotfiles-local, appended with `.local`:
 
 * `~/.aliases.local`
 * `~/.git_template.local/*`
 * `~/.gitconfig.local`
-* `~/.gvimrc.local`
-* `~/.psqlrc.local` (we supply a blank `.psqlrc.local` to prevent `psql` from
-  throwing an error, but you should overwrite the file with your own copy)
 * `~/.tmux.conf.local`
 * `~/.vimrc.local`
 * `~/.vimrc.bundles.local`
@@ -77,8 +71,8 @@ Your `~/.gitconfig.local` might look like this:
     [pretty]
       colored = format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset
     [user]
-      name = Dan Croak
-      email = dan@thoughtbot.com
+      name = Marc Winstanley
+      email = marc@example.com
 
 Your `~/.vimrc.local` might look like this:
 
@@ -157,15 +151,12 @@ What's in it?
 
 [vim](http://www.vim.org/) configuration:
 
-* [Ctrl-P](https://github.com/kien/ctrlp.vim) for fuzzy file/buffer/tag finding.
-* [Rails.vim](https://github.com/tpope/vim-rails) for enhanced navigation of
-  Rails file structure via `gf` and `:A` (alternate), `:Rextract` partials,
-  `:Rinvert` migrations, etc.
+* [FZF](https://github.com/junegunn/fzf.vim) for fuzzy file/buffer/tag finding.
 * Run many kinds of tests [from vim]([https://github.com/janko-m/vim-test)
 * Set `<leader>` to a single space.
 * Switch between the last two files with space-space.
-* Syntax highlighting for CoffeeScript, Textile, Cucumber, Haml, Markdown, and
-  HTML.
+* [ALE](https://github.com/dense-analysis/ale) For asynchronous syntax checking
+  and fixing.
 * Use [Ag](https://github.com/ggreer/the_silver_searcher) instead of Grep when
   available.
 * Map `<leader>ct` to re-index [Exuberant Ctags](http://ctags.sourceforge.net/).
@@ -173,12 +164,12 @@ What's in it?
   creating non-existing directories before writing the buffer.
 * Use [vim-plug](https://github.com/junegunn/vim-plug) to manage plugins.
 
-[tmux](http://robots.thoughtbot.com/a-tmux-crash-course)
+[tmux]
 configuration:
 
 * Improve color resolution.
 * Remove administrative debris (session name, hostname, time) in status bar.
-* Set prefix to `Ctrl+s`
+* Set prefix to `Ctrl+a`
 * Soften status bar color from harsh green to light gray.
 
 [git](http://git-scm.com/) configuration:
@@ -199,7 +190,6 @@ configuration:
 
 Shell aliases and scripts:
 
-* `b` for `bundle`.
 * `g` with no arguments is `git status` and with arguments acts like `git`.
 * `git-churn` to show churn for the files changed in the branch.
 * `migrate` for `rake db:migrate && rake db:rollback && rake db:migrate`.
@@ -210,22 +200,6 @@ Shell aliases and scripts:
 
 Thanks
 ------
-
-Thank you, [contributors](https://github.com/thoughtbot/dotfiles/contributors)!
-Also, thank you to Corey Haines, Gary Bernhardt, and others for sharing your
-dotfiles and other shell scripts from which we derived inspiration for items
-in this project.
-
-License
--------
-
-dotfiles is copyright © 2009-2016 thoughtbot. It is free software, and may be
-redistributed under the terms specified in the [`LICENSE`] file.
-
-[`LICENSE`]: /LICENSE
-
-About 
-----------------
 
 These dotfiles are a work in progress and are based on the dotfiles provided by
 [thoughtbot](http://thoughtbot.com).

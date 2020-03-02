@@ -1,0 +1,27 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+<Leader>ct	vim/plugin/ctags.vim	/^nmap <Leader>ct :call ReindexCtags()<CR>$/;"	m
+GitChurn	bin/git-churn	/^class GitChurn$/;"	c
+ReindexCtags	vim/plugin/ctags.vim	/^function! ReindexCtags()$/;"	f
+calculate	bin/git-churn	/^  def calculate$/;"	f	class:GitChurn
+create_detached_session	bin/tat	/^create_detached_session() {$/;"	f
+create_if_needed_and_attach	bin/tat	/^create_if_needed_and_attach() {$/;"	f
+file_changed?	bin/git-churn	/^  def file_changed?(file)$/;"	f	class:GitChurn
+filter_into_result	bin/git-churn	/^  def filter_into_result$/;"	f	class:GitChurn
+format_logs	bin/git-churn	/^  def format_logs$/;"	f	class:GitChurn
+g:Tlist_Ctags_Cmd	vim/plugin/ctags.vim	/^let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"$/;"	v
+g:go_fmt_command	vim/ftplugin/go.vim	/^let g:go_fmt_command = "goimports"$/;"	v
+get_all_files_with_churn_count	bin/git-churn	/^  def get_all_files_with_churn_count$/;"	f	class:GitChurn
+get_changed_files	bin/git-churn	/^  def get_changed_files$/;"	f	class:GitChurn
+git_prompt_info	zsh/configs/prompt.zsh	/^git_prompt_info() {$/;"	f
+not_in_tmux	bin/tat	/^not_in_tmux() {$/;"	f
+print_result	bin/git-churn	/^  def print_result$/;"	f	class:GitChurn
+remove_blank_lines	bin/git-churn	/^  def remove_blank_lines$/;"	f	class:GitChurn
+remove_duplicates	bin/git-churn	/^  def remove_duplicates$/;"	f	class:GitChurn
+result	bin/git-churn	/^  attr_accessor :all_files_with_churn_count, :changed_files, :result$/;"	A
+session_exists	bin/tat	/^session_exists() {$/;"	f
+sort_by_ascending_churn_count	bin/git-churn	/^  def sort_by_ascending_churn_count$/;"	f	class:GitChurn
