@@ -111,6 +111,7 @@ local servers = {
 			},
 		},
 	},
+	jdtls = {},
 }
 
 require("mason").setup()

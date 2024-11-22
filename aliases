@@ -7,4 +7,9 @@ alias v="$VISUAL"
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
-alias python='python3'
+
+# Depending on how you installed node you may need this so that it uses the above file.
+ # Redhat or homebrew installed nodes use this flag as the default
+ # nvm or nodenv installs, or compiled from source, uses an embedded CA by default and so ignores the SSL_CERT_FILE
+ # By specifying an alias, we can force it either way.
+ alias node="node --use-openssl-ca"

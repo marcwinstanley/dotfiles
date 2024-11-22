@@ -24,6 +24,6 @@
   autosquash = true
 [user]
 	name = Marc Winstanley
-	email = marcawinstanley@gmail.com
+	email = marc.winstanley@bbc.co.uk
 [url "git@github.com:"]
 	insteadOf = https://github.com
