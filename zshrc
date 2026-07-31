@@ -45,20 +45,11 @@ _load_settings "$HOME/.zsh/configs"
 # Prevent the up arrow from displaying '^?' at the command line
 stty erase '^?'
 
-# Create NVM_DIR for node version manager
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
-
 # Use the later version of CuRL (with Open SSL)
 export PATH="/usr/local/opt/curl/bin:$PATH"
 
 #Update to latest version of SSL
 export PATH="/usr/local/opt/openssl@3/bin:$PATH"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-eval "$(rbenv init - zsh)"
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+eval "$(mise activate zsh)"
+source ~/.webShellRc

@@ -5,8 +5,6 @@ vim.g.maplocalleader = "\\"
 -- Set nerd font
 vim.g.have_nerd_font = true
 
-vim.o.spelllang = "en_gb"
-
 vim.opt.number = true -- Add line numbers
 vim.opt.colorcolumn = "81" -- Make it obvious where 80 characters is
 vim.opt.numberwidth = 5 -- Set column width for line numbers
@@ -49,12 +47,16 @@ vim.keymap.set("n", "<leader>l", ":TestLast<CR>", { noremap = true, silent = tru
 vim.keymap.set("n", "<leader>a", ":TestSuite<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>gt", ":TestVisit<CR>", { noremap = true, silent = true })
 
+-- Test settings
+vim.g["test#strategy"] = "neovim"
+vim.g["test#preserve_screen"] = 1
+vim.cmd([[let g:test#javascript#nodetest#file_pattern = '\v(tests?/.*|\.(spec|test))\.(js|ts)$']])
+
 vim.keymap.set("n", "<leader><leader>", "<c-^>", { noremap = true }) -- switch between the last two files
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>") -- Clear highlights on search when pressing <Esc>
-vim.keymap.set({ "n", "v" }, "<C-_><C-_>", "gcc", { remap = true }) -- Toggle comments using
-vim.keymap.set({ "n", "v" }, "<leader>", '"+y', { noremap = true }) -- Yank to + register (system clipboard)
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")                  -- Clear highlights on search when pressing <Esc>
+vim.keymap.set({ "n", "v" }, "<C-_><C-_>", "gcc", { remap = true })  -- Toggle comments using
+vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { noremap = true }) -- Yank to + register (system clipboard)
 
 require("config.lazy")
 require("config.telescope")
 require("config.lsp")
-require("config.autocomplete")

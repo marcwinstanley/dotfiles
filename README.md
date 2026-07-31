@@ -54,8 +54,6 @@ Contents
 
 [git](http://git-scm.com/) configuration:
 
-* Adds a `delete-branch` alias to delete feature branches.
-* Adds a `rename-branch` alias to rename a branch.
 * Adds a `ca` alias for `git commit --amend` with the current date.
 * Adds an `up` alias to fetch and rebase `origin/main` into the feature
   branch. Use `git up -i` for interactive rebases.
@@ -70,23 +68,17 @@ Contents
 * Use [Lazy](https://github.com/folke/lazy.nvim) to manage plugins
 * Use [Telescope](https://github.com/nvim-telescope/telescope.nvim) for fuzzy
   finding
-* Use [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) for various completions
+* Use [blink.cmp](https://github.com/saghen/blink.cmp) for various completions
 * Use [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) to configure
   LSP functionality
-* Use [Mason](https://github.com/williamboman/mason.nvim) to install LSPs and
   related tools
 * Use [Conform](https://github.com/stevearc/conform.nvim) for formatting
   functionality
-* Use [LuaSnip](https://github.com/L3MON4D3/LuaSnip) for snippets
-
-
 
 
 Shell aliases and scripts:
 
 * `g` with no arguments is `git status` and with arguments acts like `git`.
-* `git-churn` to show churn for the files changed in the branch.
 * `mcd` to make a directory and change into it.
-* `replace foo bar **/*.rb` to find and replace within a given list of files.
-* `tat` to attach to tmux session named the same as the current directory.
+* `envup` to load a .env file into shell session for environment variables.
 * `v` for `$VISUAL`.
