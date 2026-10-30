@@ -15,31 +15,21 @@ Clone onto your machine
 
     git clone git://github.com/marcwinstanley/dotfiles.git ~/dotfiles
 
-Install [rcm](https://github.com/thoughtbot/rcm):
+Install [Mise](https://mise.jdx.dev/)
 
-    brew tap thoughtbot/formulae
-    brew install rcm
+    curl -fsSL https://mise.run | sh
 
 Install the dotfiles:
 
-    env RCRC=$HOME/dotfiles/rcrc rcup
+    mise dot apply --dry-run
+    mise dot apply
 
-rcm is a management suite for dotfiles. It provides a number of programs that
-can be used for this task (the documentation provides explanations for these).
+Mise (pronounced "meez", short for mise-en-place) manages a project's dev tools,
+environment variables, and tasks from one mise.toml that works across your
+shell, editor, and CI.
 
-After the initial installation, `rcup` will symlink the repo's `rcrc` to
-`~/.rcrc`. The `rcup` command will create symlinks for config files in the home
-directory.
-
-The `rcup` command can be run multiple times to update the dotfiles, in the case
-of pulling a new version or the addition of new files.
-
-    rcup
-
-The `rcrc` file contains some configuration options, including exclusions.
-Currently the `README.md` and the `LICENSE` file are excluded and won't be
-symlinked.
-
+The mise.toml file contains configuration for the dotfiles. The `mise dot apply`
+command will create symlinks for config files in the home directory.
 
 Contents
 --------

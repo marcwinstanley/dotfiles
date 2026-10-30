@@ -1,0 +1,11 @@
+[dotfiles]
+"~/.config/nvim/" = { source = "config/nvim" }
+"~/.aliases" = { source = "aliases" }
+"~/.zshrc" = { source = "zshrc" }
+"~/.tmux.conf" = { source = "tmux.conf" }
+"~/.curlrc" = { source = "curlrc" }
+"~/.git_template" = { source = "git_template" }
+"~/.gitconfig" = { source = "gitconfig" }
+"~/.gitignore" = { source = "gitignore" }
+"~/.gitmessage" = { source = "gitmessage" }
+"~/.zsh" = { source = "zsh", mode = "symlink-each" }
